@@ -1,0 +1,1 @@
+ffprobe -v error -count_frames -select_streams v:0 -show_entries stream=nb_frames -of default=nokey=1:noprint_wrappers=1 ~/PaperSkelDatabase/Batting0416/0416_56_1/0416_56_1_1.mp4

@@ -296,11 +296,13 @@ def sensorSegAndSave(frameStart, frameImpact, frameEnd):
 
 	# new a directory
 	# 
+	if not os.path.exists("whole"):
+	    os.makedirs("whole")
 	if not os.path.exists("AfterImpact"):
 	    os.makedirs("AfterImpact")
 	if not os.path.exists("BeforeImpact"):
 	    os.makedirs("BeforeImpact")
-	outputFP = open(outputFile, 'w')
+	outputFP = open("whole/" + outputFile, 'w')
 	outputFPA = open("AfterImpact/" + outputAfterFile, 'w')
 	outputFPB = open("BeforeImpact/" + outputBeforeFile, 'w')
 	csvWriter = csv.writer(outputFP)
